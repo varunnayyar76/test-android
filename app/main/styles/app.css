@@ -1,0 +1,387 @@
+
+a {
+	text-decoration: none;
+	cursor: pointer;
+}
+ul{
+	list-style:none;
+}
+img {
+	max-width: 100%; max-height: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 100;
+	text-shadow: none;
+}
+p {
+	text-shadow: none;
+}
+
+@font-face {
+    font-family: 'robotolight';
+    src: url('../fonts/roboto-light-webfont.eot');
+    src: url('../fonts/roboto-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/roboto-light-webfont.woff2') format('woff2'),
+         url('../fonts/roboto-light-webfont.woff') format('woff'),
+         url('../fonts/roboto-light-webfont.ttf') format('truetype'),
+         url('../fonts/roboto-light-webfont.svg#robotolight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'robotoregular';
+    src: url('../fonts/roboto-regular-webfont.eot');
+    src: url('../fonts/roboto-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/roboto-regular-webfont.woff2') format('woff2'),
+         url('../fonts/roboto-regular-webfont.woff') format('woff'),
+         url('../fonts/roboto-regular-webfont.ttf') format('truetype'),
+         url('../fonts/roboto-regular-webfont.svg#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'robotobold';
+    src: url('../fonts/roboto-bold-webfont.eot');
+    src: url('../fonts/roboto-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/roboto-bold-webfont.woff2') format('woff2'),
+         url('../fonts/roboto-bold-webfont.woff') format('woff'),
+         url('../fonts/roboto-bold-webfont.ttf') format('truetype'),
+         url('../fonts/roboto-bold-webfont.svg#robotobold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'RobotoMedium';
+    src: url('../fonts/roboto-medium.eot');
+    src: url('../fonts/roboto-medium.eot') format('embedded-opentype'),
+         url('../fonts/roboto-medium.woff') format('woff'),
+         url('../fonts/roboto-medium.ttf') format('truetype'),
+         url('../fonts/roboto-medium.svg#RobotoMedium') format('svg');
+        font-weight: normal;
+      font-style: normal;
+
+}
+input,select,textarea,button{font-family: 'robotoregular';}
+body{
+font-family: 'robotoregular';
+  font-style: normal;background: #bf2b39;
+}
+.header-block{height:270px;border-bottom: 4px solid #7d2426;background: #fff;}
+.logo-block{width:100%; text-align: center;float:left;margin-top: -140px;}
+.login-form-block{width:100%; float:left;text-align:center;}
+.login-inner-block{max-width:500px;display:inline-block;color:#fff;}
+.login-box-content{width:100%; float:left;padding:50px 0px;}
+.login-box-content h2{font-size: 30px;width:100%; float:left;margin-bottom: 10px;}
+.login-box-content p{font-size: 14px;width:100%; float:left;margin-bottom: 15px;}
+.login-box-content hr{width:146px; height:3px; background: #fff;display: inline-block;border:none;}
+.input-container-block{padding:30px 0px;width:100%;float:left;position: relative;text-align: left;}
+.input-container-block input{height:40px;background: transparent;width:100%;border:none;border-bottom: 1px solid rgba(255,255,255,0.4);transition: all 1s;font-size:14px;color:#fff;}
+.input-container-block label {position: absolute; top: 30px; margin: auto;transition: all 1s;width:100%; float:left;left:0;}
+.input-container-block input:focus{border:none;border-bottom: 1px solid rgba(255,255,255,0.4);outline: none}
+.input-container-block input:focus + label {top:0;}
+a.forgotpwd {background: #7d2426; padding: 8px 5px; font-size: 14px; color: #fff; border-radius: 3px;   position: absolute; right: 0;top: 29px;line-height: 14px;}
+.loginnbtn{width:100%;float:left;margin-bottom: 50px;margin-top:30px;}
+.loginnbtn button {height: 77px; width: 100%; border-radius: 100px; border: none; font-size: 22px;  color: #fff; background: #231f20;}
+.signuptxt{margin-bottom: 50px;color: #fff;font-size: 14px;width:100%;float:left;}
+.signuptxt a{color:#fff;text-decoration: underline;}
+/*************profile*************/
+.whitebg{background: #fff;}
+.profileheader{background: #bf2b39;width:100%; float:left;padding: 0px 30px;}
+.profile-header-top{width:100%;float:left;padding:20px 0px;text-align: center;}
+.logoicon {
+    width: auto;
+    float: left;
+    vertical-align: middle;
+}
+.profiletxt {
+    font-size: 20px;
+    color: #fff;
+    display: inline-block;
+    vertical-align: middle;
+}
+.menuicon {
+    width: auto;
+    float: right;
+    vertical-align: middle;
+    padding: 15px 0px;position: relative;
+}
+.profilemenu {
+    position: absolute;
+    width: 170px;
+    right: 0;
+    top: 29px;
+    background: #fff;
+    font-size: 14px;
+    text-align: left;z-index: 2;
+}
+.editprofile {
+    border-bottom: 1px solid #dedede;
+    width:100%;float:left;
+}
+.edit{background: url(../img/edit.png) no-repeat 15px center;}
+.changepwd{background: url(../img/chpwd.png) no-repeat 15px center;}
+.editprofile a {
+    width: 100%;
+    float: left;
+    padding: 10px 10px 10px 40px;
+    color: #231f20;
+}
+.profileimg-block{width:100%;float:left;text-align:center;}
+.profileimgblk{width:226px;display: inline-block;position: relative;margin-bottom:23px;}
+.profileimgmain{width:226px;height:226px;border-radius: 236px;overflow: hidden;border:10px solid #a62532;}
+.camera {
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    display: inline-block;
+    border-radius: 50px;
+    padding: 8px 3px;
+    border: 4px solid #a62532;
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+}
+.profileimg-block h2 {
+    color: #fff;
+    font-size: 25px;
+    margin-bottom: 7px;width:100%; float:left;
+}
+.profileimg-block p {
+    color: #e7b1b6;
+    font-size: 14px;
+    margin-bottom: 65px;width:100%; float:left;
+}
+.checkinbtm{width:100%;float:left;}
+.checkinbtn {
+    width: 287px;
+    height: 60px;
+    font-size: 22px;
+    border-radius: 54px;
+    border: none;
+    background: #231f20;
+    color: #fff;
+    display: inline-block;
+    border: 3px solid #fff;
+}
+.checkinbtm {
+    text-align: center;
+    width: 100%;
+    float: left;
+    margin-top: -30px;
+}
+.profiletxtblock{
+  width: 100%;
+  float:left;margin-top:45px;
+}
+.profileinnercontent{max-width: 90%;margin: 0px auto;}
+.txtrowblock {
+    width: 100%;
+    float: left;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #dcdbdb;
+    font-size: 20px;
+    color: #231f20;
+    position: relative;
+    padding-left: 80px;
+}
+.txtrowblock img {
+    position: absolute;
+    left: 15px;
+    top: -3px;
+    margin: auto;
+}
+.txtrowblock:last-child{margin-bottom: 0px;}
+/************* profile end*************/
+/*************edit profile *************/
+.editprofiletxtblock {
+    margin: 30px auto;
+    width: 100%;
+    float: left;
+    padding: 0 10%;
+}
+.edit-profile-row{width:100%;float:left;position: relative;}
+.edit-profilehalf{width:48%;float:left;}
+.edit-profilehalf:last-child{float:right;}
+.edit-profileinput{padding:20px 0px; position: relative;width:100%;float:left;}
+.edit-profileinput input ,.edit-profileinput select{
+    height: 40px;
+    width: 100%;
+    float: left;
+    border: none;
+    font-size: 22px;
+    color: #231f20;border:none;transition: all 1s;
+}
+.edit-profileinput input:focus,.edit-profileinput select:focus{outline:none;}
+.edit-profileinput span.bar {
+    height: 2px;
+    background: #dedede;
+    width: 100%;
+    float: left;transition: all 1s;
+}
+.edit-profileinput label{color: #747474;
+    position: absolute;
+    left: 0;
+    top: 30px;
+    font-size: 15px;
+    float: left;
+    width: 100%;transition: all 1s;}
+.hasvalue label {
+    color: #747474;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 15px;
+    float: left;
+    width: 100%;
+}
+.edit-profileinput input:focus ~ span.bar ,.edit-profileinput select:focus ~ span.bar {background: #bf2b39;}
+.edit-profilefull{width:100%;float:left;}
+select{background: url(../img/selectarrow.png)no-repeat 96% center;appearance:none;-moz-appearance:none;-webkit-appearance:none;}
+.updateprofile{width:100%; float:left;}
+.update{height:100px;font-size:22px;color:#fff;background: #231f20;width:100%;border:none;    position: absolute;
+    bottom: 0;}
+.changepwdbody{position: relative;padding-bottom: 100px;min-height: 100%;float:left;}
+html{height: 100%;}
+.overlaypopup{position: fixed;background: rgba(0,0,0,0.5);height: 100%;width:100%;left:0;top:0;z-index: 6;}
+.sucess-message{padding: 25px;width:100%;background: #fff;position: relative;}
+.crossimg {
+    position: absolute;
+    right: 20px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.sucessimg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.sucess-message p {
+    font-size: 22px;
+    color: #131313;
+    padding: 0px 70px;
+}
+.sucess-message p span{
+    color: #bf2838;
+}
+/*************edit profile end*************/
+@media screen and (max-width: 640px){
+.login-inner-block{max-width:75%;}
+}
+@media screen and (max-width: 480px){
+.header-block{height:100px;}
+.logo-block{margin-top: -60px;}
+.logo-block img{width:90px;}
+.login-box-content {
+    padding: 10px 0px;
+}
+.login-box-content h2 {
+    font-size: 23px;
+    margin-bottom: 3px;
+}
+.login-box-content p {
+    font-size: 13px;
+    margin-bottom: 7px;
+    padding:0px 0px;
+}
+.login-inner-block{max-width: 75%;}
+.input-container-block {
+    padding: 10px 0px 20px;
+  }
+  .input-container-block input {
+    height: 30px;font-size: 13px;
+  }
+  .input-container-block label {
+    top: 10px;
+    font-size: 13px;
+}
+a.forgotpwd {
+    padding: 6px 5px;
+    font-size: 12px;
+    right: 0;
+    top: 8px;
+    line-height: 11px;
+}
+.loginnbtn {
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+.loginnbtn button {
+    height: 42px;
+    font-size: 17px;
+}
+.signuptxt {
+    font-size: 12px;
+}
+/**********profile*************/
+.profile-header-top{padding: 10px 0px;}
+
+.profileimgmain {
+    width: 150px;
+    height: 150px;
+    border: 5px solid #a62532;
+}
+.profileimgblk{width:150px;    margin-bottom: 4px;}
+.camera {
+    width: 37px;
+    height: 37px;
+    padding: 8px 3px;
+    bottom: 10px;
+}
+.profileimg-block h2 {
+    font-size: 17px;
+    margin-bottom: 7px;
+}
+.profileimg-block p{margin-bottom: 45px;}
+.checkinbtn {
+    width: 197px;
+    height: 45px;
+    font-size: 15px;
+}
+.profiletxtblock {
+    margin-top: 25px;
+}
+.txtrowblock {
+    width: 100%;
+    float: left;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #dcdbdb;
+    font-size: 15px;
+    color: #231f20;
+    position: relative;
+    padding-left: 58px;
+}
+.txtrowblock img {
+    top: 0;
+    max-height: 20px;
+}
+/**********profile end*************/
+/*************edit profile *************/
+.edit-profilehalf {
+    width: 100%;
+    float: left;
+}
+.edit-profileinput input, .edit-profileinput select{font-size: 16px;}
+.update{height:60px;font-size:17px;}
+
+.changepwdbody{padding-bottom:60px;}
+
+.sucess-message p{font-size:16px;padding: 0px 40px;}
+.sucessimg {
+    width: 33px;
+}
+.sucess-message {
+    padding: 17px;
+}
+.crossimg {
+    width: 17px;
+}
+/*************edit profile end*************/
+}
+

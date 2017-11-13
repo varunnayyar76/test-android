@@ -1,0 +1,36 @@
+<div class="header-block">
+</div>
+<div class="logo-block">
+    <img src="main/assets/images/logo.png" />
+</div>
+<div class="login-form-block">
+    <form name="myForm" role="form">
+        <div class="login-inner-block">
+            <div class="login-box-content">
+                <h2>Login</h2>
+                <p>We're happy to see you return! Please login to continue.</p>
+                <hr/>
+            </div>
+            <div class="input-container-block" ng-class="{'hasvalue' : !myForm.email.$error.required, 'errOuter' : myForm.email.$error && myForm.email.$dirty }">
+                <input name="email" type="email" ng-model="email" required="" />
+                <span class="errBlock" ng-show="(myForm.email.$dirty && myForm.email.$error.required)">Email is required.</span>
+                <span class="errBlock" ng-show="myForm.email.$error.email">Invalid email address.</span>
+                <label>Email</label>
+            </div>
+            <div class="input-container-block" ng-class="{'hasvalue' : !myForm.password.$error.required, 'errOuter' : myForm.password.$error && myForm.password.$dirty }">
+                <input name="password" type="password" ng-minlength="6" ng-model="password" required="" />
+                <span class="errBlock" ng-show="myForm.password.$dirty && myForm.password.$error.required">Password is required.</span>
+                <span class="errBlock" ng-show="myForm.password.$dirty && myForm.password.$error.minlength">Password must be longer than 6 characters.</span>
+                <label>Password</label>
+                <a ui-sref="forgotpassword" class="forgotpwd">Forgot?</a>
+            </div>
+            <div class="loginnbtn">
+                <button ng-click="myForm.$valid && formSubmit()">LOGIN</button>
+            </div>
+            <div class="signuptxt" ui-sref="signin">
+                Don’t have an account. Please
+                <a ui-sref="signin">Sign Up Now</a>
+            </div>
+        </div>
+    </form>
+</div>

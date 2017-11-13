@@ -1,0 +1,58 @@
+<div class="profile-outer">
+	<div class="profileheader">
+		<div class="profile-header-top">
+			<div class="logoicon">
+				<img src="main/assets/images/logoicon.png" />
+			</div>
+			<div class="profiletxt">
+				Profile
+			</div>
+			<div class="menuicon" ng-click="showMenu = !showMenu ">
+					<img src="main/assets/images/menuicon.png" />
+				<div class="profilemenu" ng-show="showMenu">
+					<div class="editprofile edit">
+						<a ui-sref="editUserProfile({data : profile})">Edit Profile</a>
+					</div>
+					<div class="editprofile changepwd">
+						<a ui-sref="changePassword({data : profile})">Change Password</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="profileimg-block">
+			<div class="profileimgblk">
+				<div ng-if="!profile.image" class="profileimgmain">
+					<img src="main/assets/images/default_img.png" />
+				</div>
+				<div ng-if="profile.image" class="profileimgmain">
+					<img src="main/assets/images/profileimg.png" />
+				</div>
+				<div class="camera" ng-click="uploadImg()">
+					<img src="main/assets/images/camera.png" />
+				</div>
+			</div>
+			
+			<h2>{{profile.firstname}} {{profile.lastname}}</h2>
+			<p>{{profile.email}}</p>
+		</div>
+	</div>
+	<div class="checkinbtm">
+		<button class="checkinbtn" ng-click="checkIn()">CHECK IN NOW</button>
+	</div>
+	<div class="profiletxtblock">
+		<div class="profileinnercontent">
+			<div class="txtrowblock">
+				<img src="main/assets/images/ic1.png" /> {{profile.dob}} {{data}}
+			</div>
+			<div class="txtrowblock">
+				<img src="main/assets/images/ic2.png" /> {{profile.gender}}
+			</div>
+			<div class="txtrowblock">
+				<img src="main/assets/images/ic3.png" /> {{profile.phone}}
+			</div>
+			<div class="txtrowblock">
+				<img src="main/assets/images/ic4.png" /> {{profile.street_address}} {{profile.city ? "," + profile.city : ""}} {{profile.state ? ',' + profile.state : ""}}{{profile.zipcode ? ', (' + profile.zipcode + ')' : ""}}
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,14 @@
+<ion-modal-view class="msg_modal">
+  <div class="sucess-message">
+    <span ng-if="error == ''">
+        <img src="main/assets/images/successimg.png" class="sucessimg" />        
+    </span>
+    <span ng-if="error !== ''">
+        <img src="main/assets/images/iconexclamation.png" class="sucessimg" />        
+    </span>
+    <button class="button crossimg" ng-click="closeModal()">
+      <img src="main/assets/images/crossimg.png" class="crossimg" />
+    </button>
+    <p>{{error ? error : success}}</p>
+  </div>
+</ion-modal-view>

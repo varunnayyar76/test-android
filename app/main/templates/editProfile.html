@@ -1,0 +1,151 @@
+<div class="profileheader">
+	<div class="profile-header-top">
+		<div class="logoicon">
+			<a ui-sref="userProfile({id : profile.id})">
+				<img src="main/assets/images/back.png" />
+			</a>
+		</div>
+		<div class="profiletxt">
+			Edit Profile
+		</div>
+	</div>
+</div>
+<form name="editProfileForm" role="form">
+	<div class="editprofiletxtblock">
+		<div class="edit-profile-row">
+			<div class="edit-profilehalf">
+				<div class="edit-profileinput" ng-class="{'hasvalue' : !editProfileForm.firstname.$error.required, 'errOuter' : editProfileForm.firstname.$error && editProfileForm.firstname.$dirty }">
+					<input type="text" name="firstname"  ng-model="profile.firstname" required="" />
+					<label>First Name</label>
+					<span class="bar-bottom1"></span>
+					<span class="errBlock" ng-show="editProfileForm.firstname.$error.required && editProfileForm.firstname.$dirty">First name is required.</span>
+				</div>
+			</div>
+			<div class="edit-profilehalf">
+				<div class="edit-profileinput" ng-class="{'hasvalue' : !editProfileForm.lastname.$error.required, 'errOuter' : editProfileForm.lastname.$error && editProfileForm.lastname.$dirty }">
+					<input type="text" name="lastname" id="lastname" ng-model="profile.lastname" required="" />
+					<label>Last Name</label>
+					<span class="bar-bottom1"></span>
+					<span class="errBlock" ng-show="editProfileForm.lastname.$error.required && editProfileForm.lastname.$dirty">Last name is required.</span>
+				</div>
+			</div>
+		</div>
+		<div class="edit-profile-row">
+			<div class="edit-profilefull">
+				<div class="edit-profileinput" ng-class="{'hasvalue' : !editProfileForm.email.$error.required, 'errOuter' : editProfileForm.email.$error && editProfileForm.email.$dirty }">
+					<input type="email" name="email" ng-model="profile.email" required />
+					<label>Email</label>
+					<span class="bar-bottom1"></span>
+					<span class="errBlock" ng-show="(editProfileForm.email.$dirty && editProfileForm.email.$error.required)">Email is required.</span>
+					<span class="errBlock" ng-show="editProfileForm.email.$error.email">Invalid email address.</span>
+					
+				</div>
+			</div>
+		</div>
+		<div class="edit-profile-row">
+			<div class="edit-profilefull">
+				<div class="edit-profileinput" ng-class="{'hasvalue' : !editProfileForm.dob.$error.required, 'errOuter' : editProfileForm.dob.$error && editProfileForm.dob.$dirty }">
+					<input type="text" name="dob" ng-model="profile.dob" required />
+					<label>Date of Birth</label>
+					<span class="bar-bottom1"></span>
+					<span class="errBlock" ng-show="editProfileForm.dob.$error.required && editProfileForm.dob.$dirty"> Date of birth is required.</span>
+				</div>
+			</div>
+		</div>
+		<div class="edit-profile-row">
+			<div class="edit-profilehalf">
+				<div class="edit-profileinput" ng-class="{'hasvalue' : !editProfileForm.gender.$error.required, 'errOuter' : editProfileForm.gender.$error && editProfileForm.gender.$dirty }">
+					<select name='gender' ng-model="profile.gender" required>
+						<option value="Male">Male</option>
+						<option value="Female">Female</option>
+					</select>
+					<label>Gender</label>
+					<span class="bar-bottom1"></span>
+					<span class="errBlock" ng-show="editProfileForm.gender.$error.required && editProfileForm.gender.$dirty"> Gender is required.</span>
+				</div>
+			</div>
+			<div class="edit-profilehalf">
+				<div class="edit-profileinput" ng-class="{'hasvalue' : !editProfileForm.patient_copay.$error.required, 'errOuter' : editProfileForm.patient_copay.$error && editProfileForm.patient_copay.$dirty }">
+					<input type="text" name="patient_copay" ng-model="profile.patient_copay" required />
+					<label for="password">Patient Copay</label>
+					<span class="bar-bottom1"></span>
+					<span class="errBlock" ng-show="editProfileForm.patient_copay.$error.required && editProfileForm.patient_copay.$dirty">Patient Copay is required.</span>
+				</div>
+			</div>
+		</div>
+		<div class="edit-profile-row">
+			<div class="edit-profilefull">
+				<div class="edit-profileinput" ng-class="{'hasvalue' : !editProfileForm.phone.$error.required, 'errOuter' : editProfileForm.phone.$error && editProfileForm.phone.$dirty }">
+					<input type="text" name="phone" ng-model="profile.phone" required />
+					<label>Cell Phone</label>
+					<span class="bar-bottom1"></span>
+					<span class="errBlock" ng-show="editProfileForm.phone.$error.required && editProfileForm.phone.$dirty"> Cell Phone is required.</span>
+				</div>
+			</div>
+		</div>
+		<div class="edit-profile-row">
+			<div class="edit-profilefull">
+				<div class="edit-profileinput" ng-class="{'hasvalue' : !editProfileForm.street_address.$error.required, 'errOuter' : editProfileForm.street_address.$error && editProfileForm.street_address.$dirty }">
+					<input type="text" name="street_address" id="street_address" ng-model="profile.street_address" required/>
+					<label>Address</label>
+					<span class="bar-bottom1"></span>
+					<span class="errBlock" ng-show="editProfileForm.street_address.$error.required && editProfileForm.street_address.$dirty"> Address is required.</span>
+				</div>
+			</div>
+		</div>
+		<div class="edit-profile-row">
+			<div class="edit-profilefull">
+				<div class="edit-profileinput" ng-class="{'hasvalue' : !editProfileForm.city.$error.required, 'errOuter' : editProfileForm.city.$error && editProfileForm.city.$dirty }">
+					<input type="text" name="city" id="city" ng-model="profile.city" required/>
+					<label>City</label>
+					<span class="bar-bottom1"></span>
+					<span class="errBlock" ng-show=" editProfileForm.city.$error.required && editProfileForm.city.$dirty"> City is required. </span>
+				</div>
+			</div>
+		</div>
+		<div class="edit-profile-row">
+			<div class="edit-profilefull">
+				<div class="edit-profileinput" ng-class="{'hasvalue' : !editProfileForm.state.$error.required, 'errOuter' : editProfileForm.state.$error && editProfileForm.state.$dirty }">
+					<input type="text" name="state" id="state" ng-model="profile.state" 
+					required=""/>
+					<label>State</label>
+					<span class="bar-bottom1"></span>
+					<span class="errBlock" ng-show="editProfileForm.state.$error.required && editProfileForm.state.$dirty"> State is required. </span>
+				</div>
+			</div>
+		</div>
+		<div class="edit-profile-row">
+			<div class="edit-profilefull">
+				<div class="edit-profileinput" ng-class="{'hasvalue' : !editProfileForm.zipcode.$error.required, 'errOuter' : editProfileForm.zipcode.$error && editProfileForm.zipcode.$dirty }">
+					<input type="text" name="zipcode" id="zipcode" ng-model="profile.zipcode" required="" />
+					<label>Zipcode</label>
+					<span class="bar-bottom1"></span>
+					<span class="errBlock" ng-show="editProfileForm.zipcode.$error.required && editProfileForm.zipcode.$dirty"> Zipcode is required. </span>
+				</div>
+			</div>
+		</div>
+		<div class="edit-profile-row">
+			<div class="edit-profilefull">
+				<div class="edit-profileinput" ng-class="{'hasvalue' : !editProfileForm.reference.$error.required, 'errOuter' : editProfileForm.reference.$error && editProfileForm.reference.$dirty }">
+					<input type="text" name="reference" id="reference" ng-model="profile.reference" required />
+					<label for="password">How did you hear about us</label>
+					<span class="bar-bottom1"></span>
+					<span class="errBlock" ng-show="editProfileForm.reference.$error.required && editProfileForm.reference.$dirty ">Reference is required.</span>
+				</div>
+			</div>
+		</div>
+		<div class="edit-profile-row">
+			<div class="edit-profilefull">
+				<div class="edit-profileinput" ng-class="{'hasvalue' : !editProfileForm.visit_reason.$error.required, 'errOuter' : editProfileForm.visit_reason.$error && editProfileForm.visit_reason.$dirty }">
+					<input type="text" name="visit_reason" ng-model="profile.visit_reason" required />
+					<label for="password">The reason for visit</label>
+					<span class="bar-bottom1"></span>
+					<span class="errBlock" ng-show="editProfileForm.visit_reason.$error.required && editProfileForm.visit_reason.$dirty" class="bar-bottom1"> The reason for visit is required.</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="updateprofile">
+		<button type="submit" class="update" ng-click="editProfileForm.$valid && editProfile()">Save</button>
+	</div>
+</form>

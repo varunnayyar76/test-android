@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <!-- ionic meta tags -->
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <!-- custom meta tags -->
+  <meta name="format-detection" content="telephone=no">
+  <!-- no auto telephone linking -->
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <!-- can be saved to home screen on ios -->
+  <title>bhhr</title>
+
+  <link rel="stylesheet" href="styles/vendor.css">
+
+  <link rel="stylesheet" href="main/styles/app.css">
+</head>
+
+<body ng-app="bhhr" ng-class="{'whitebg': body_class,'changepwdbody': editProfile_class}">
+    <ion-scroll zooming="true" direction="y" style="width: 100%; height: 100vh">
+    <ui-view></ui-view>
+   </ion-scroll>
+  
+
+  <!-- the nav bar will be updated as we navigate between views -->
+  <!-- <ion-nav-bar> can be removed when using sidemenu (contained in menu.html) -->
+  <!-- <ion-nav-bar class="bar-assertive">
+      <ion-nav-back-button></ion-nav-back-button>
+    </ion-nav-bar>
+    the current view will be rendered in the <ion-nav-view> directive
+    <ion-nav-view></ion-nav-view> -->
+
+  <!-- will be a 404 during development -->
+
+  <script src="scripts/vendor.js"></script>
+
+  <script src="scripts/app.js"></script>
+</body>
+
+</html>
