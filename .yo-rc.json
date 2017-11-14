@@ -1,0 +1,17 @@
+{
+  "generator-m-ionic": {
+    "answers": {
+      "appName": "bhhr",
+      "appId": "com.bhhr.app",
+      "ionicCss": true,
+      "bowerPackages": [
+        "localforage#~1.4.0"
+      ],
+      "platforms": [],
+      "plugins": [],
+      "appModule": "bhhr",
+      "ecosystems": [],
+      "install": "npm"
+    }
+  }
+}
